@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.8.0/viz-lite.js"></script>
+    <link rel="stylesheet" href="stack.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>HTML Parser using PDA</title>
+</head>
+
+<body>
+	
+	<!-- As a heading -->
+	<nav class="navbar navbar-dark bg-dark">
+		<span class="navbar-brand mb-0 h1">HTML Parser Using Push-Down Automata</span>
+	</nav>
+	
+	<div id="demo" style="width: 100%; height: 100vh;">
+		<center>
+			<textarea id="name" name="txtArea" rows="30" cols="100" placeholder="Enter HTML Code Here..." ></textarea><br><br>
+			<!-- <button  onclick="getText()">Check Code</button> -->
+			<a href="#go"><button type="button" id="btn" class="btn btn-dark"  onclick="getText()" href="#main">Check Code</button></a>
+		</center>
+	</div>
+
+	<div id="result"></div>
+
+	<section class="main" id="go">
+
+		<div id="state_diagram"></div>
+
+		<div class="container-body">
+			<div class="stack">
+				<center><h4 id="content">Stack</h4></center>
+				<div class="main-stack-bucket"></div>
+			</div>
+		</div>
+
+		<div class="info">
+			<div class="box_container">
+				<h4 id="content">Tags Sequence</h4>
+				<p id="input_str"></p>
+			</div>
+
+			<div class="box_container">
+				<div class="sec">
+					Current State:
+					<button class="box" id="curr_state"></button>
+				</div>
+				<div class="sec">
+					Current Stack Symbol:
+					<button class="box" id="top_stack"></button>
+				</div>
+				<div class="sec">
+					Current Input Symbol:
+					<button class="box" id="curr_symbol"></button>
+				</div>
+				<!-- <div class="sec">
+					Size of the Stack:
+					<button class="box">5</button>
+				</div> -->
+			</div>
+		</div>
+	</section>
+
+    <script src="main.js"></script>
+    <script src="graphViz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* * {
+	font-family: "Poppins", sans-serif;
+} */
+
+.container {
+	height: 620px;
+	width: 1000px;
+	background-color: white;
+	box-shadow: 8px 8px 20px rgb(128, 128, 128);
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.container-header {
+	height: 90px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.container-header input {
+	height: 50px;
+	width: 400px;
+	font-size: 25px;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+.push,
+.pop,
+.reset,
+.box {
+	height: 30px;
+	width: 100px;
+	font-size: 20px;
+	background-color: green;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.2s;
+	border: none;
+}
+.disable-button {
+	background-color: rgb(0, 59, 0);
+}
+
+.container-header button:active {
+	transform: scale(0.95);
+}
+.container-body {
+	width: 1000px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+/* 
+.stack {
+	width: 300px;
+	height: 470px;
+	display: flex;
+	justify-content: right;
+	align-items: right;
+	border-width: 1;
+	border-color: black;
+	border-style: solid;
+} */
+
+.main-stack-bucket {
+	/* height: 200px; */
+	width: 100px;
+	border-width: 0 2px 2px 2px;
+	border-color: black;
+	border-style: solid;
+	border-radius: 0 0 10px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: end;
+	align-items: center;
+	flex-direction: column-reverse;
+	gap: 5px;
+	padding-bottom: 5px;
+}
+.main{
+	display: flex;
+	padding: 0px 100px;
+}
+#state_diagram{
+	width:600px;
+	flex: 1;
+	margin-top: 20px;
+}
+.ele {
+	height: 30px;
+	width: 80px;
+	background-color: green;
+	color: white;
+	border: 1px black solid;
+	border-radius: 10px;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ele-add {
+	animation: pushAnimation 0.3s infinite linear;
+}
+.ele-remove {
+	animation: popAnimation 0.3s infinite linear;
+}
+@keyframes pushAnimation {
+	0% {
+		background-color: green;
+	}
+	100% {
+		background-color: rgb(17, 92, 255);
+	}
+}
+@keyframes popAnimation {
+	0% {
+		background-color: green;
+	}
+	100% {
+		background-color: rgb(255, 15, 59);
+	}
+}
+
+.info {
+	height: 470px;
+	width: 500px;
+	padding-right: 125px;
+	margin-top: 200px;
+}
+
+.sec {
+	display: flex;
+	width: 270px;
+	align-items: center;
+	gap: 10px;
+	margin-top: 10px;
+	justify-content: space-between;
+}
+
+.massage-box {
+	height: 180px;
+	width: 400px;
+	margin-top: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: bisque;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.massage-box h2 {
+	text-align: center;
+	font-weight: 600;
+}
+
+.massage {
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+}
+.error-massage {
+	animation: errorMassage 0.4s infinite linear;
+}
+@keyframes errorMassage {
+	0% {
+		background-color: bisque;
+	}
+	100% {
+		background-color: rgb(255, 15, 59);
+	}
+}
+
+#content{
+	margin-bottom: 25px;
+}
+#input_str{
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+#name{
+	height:500px;
+}
+#demo{
+	width: 100%;
+	height: 100%;
+	margin-top: 25px;
+}
+#btn {
+	align-items: center;
+	justify-content: center;
+	margin-top: -20px;
+}
+
+.box_container {
+	border: 1px solid black; padding: 20px;
+	margin: 20px;
+}
